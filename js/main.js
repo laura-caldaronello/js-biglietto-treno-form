@@ -4,29 +4,31 @@ document.getElementById("ticket-container").style.display = "none";
 
 element1.addEventListener('click',
 function() {
-  var personName = document.getElementById("inputName").value;
-  console.log(personName);
+  var personName = document.getElementById("inputName");
   
-  var personKm = document.getElementById("inputKm").value;
+  var personKm = document.getElementById("inputKm");
 
-  var personAge = document.getElementById("inputAge").value;
+  var personAge = document.getElementById("inputAge");
 
-  if (personName != "" && personKm != "" && personAge != "") {
+  if (personName != "" &&
+      personKm.value != "" &&
+      personAge.value != "") {
+
     document.getElementById("ticket-container").style.display = "flex";
 
-    document.getElementById("outputName").innerHTML = personName;
+    document.getElementById("outputName").innerHTML = personName.value;
 
-    var whole = 0.21 * personKm;
-    if (personAge == "range1") {
+    var whole = 0.21 * personKm.value;
+    if (personAge.value == "range1") {
       var price = 0.8 * whole;
       var price = price.toFixed(2);
       var offer = "Sconto Minorenne";
     }
-    else if (personAge == "range2") {
+    else if (personAge.value == "range2") {
       var price = whole.toFixed(2);
       var offer = "Prezzo intero";
     }
-    else if (personAge == "range3") {
+    else if (personAge.value == "range3") {
       var price = 0.6 * whole;
       var price = price.toFixed(2);
       var offer = "Sconto Over 65";
