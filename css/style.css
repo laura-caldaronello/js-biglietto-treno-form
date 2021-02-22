@@ -56,6 +56,17 @@ body {
   padding: 2px;
 }
 
+.ms-input-element > *:last-child {
+  width: 150px;
+  margin-top: 10px;
+  border: 1px solid rgb(185,20,80);
+  border-radius: 2px;
+  padding: 3px;
+}
+.ms-input-element > *:last-child:focus {
+  background-color: rgba(185,20,80,0.5);
+}
+
 /* /classi generiche */
 
 /* classi specifiche */
@@ -67,13 +78,6 @@ body {
 #input-container {
   display: flex;
   justify-content: space-around;
-}
-#input-container .input-element > *:last-child {
-  width: 150px;
-  margin-top: 10px;
-  border: 1px solid rgb(185,20,80);
-  border-radius: 2px;
-  padding: 3px;
 }
 
 #buttons-container {
@@ -87,6 +91,8 @@ body {
   justify-content: space-between;
   margin-top: 15px;
   height: 150px;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
 }
 #ticket-container > * {
   padding: 15px;
@@ -99,8 +105,6 @@ body {
   margin-top: 5px;
 }
 #ticket-container > *:not(:first-child) {
-  border-top: 1px solid grey;
-  border-bottom: 1px solid grey;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

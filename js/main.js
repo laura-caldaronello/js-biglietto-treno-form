@@ -4,43 +4,55 @@ document.getElementById("ticket-container").style.display = "none";
 
 element1.addEventListener('click',
 function() {
-  document.getElementById("ticket-container").style.display = "flex";
+  var personName = document.getElementById("inputName").value;
+  console.log(personName);
+  
+  var personKm = document.getElementById("inputKm").value;
 
-  var outputName = document.getElementById("inputName").value;
-  document.getElementById("outputName").innerHTML = outputName;
+  var personAge = document.getElementById("inputAge").value;
 
-  var outputKm = document.getElementById("inputKm").value;
+  if (personName != "" && personKm != "" && personAge != "") {
+    document.getElementById("ticket-container").style.display = "flex";
 
-  var outputAge = document.getElementById("inputAge").value;
-  var whole = 0.21 * outputKm;
-  if (outputAge == "range1") {
-    var offer = 0.8 * whole;
-    var offer = offer.toFixed(2);
-    document.getElementById("outputOffer").innerHTML = "Sconto Minorenne";
+    document.getElementById("outputName").innerHTML = personName;
+
+    var whole = 0.21 * personKm;
+    if (personAge == "range1") {
+      var price = 0.8 * whole;
+      var price = price.toFixed(2);
+      var offer = "Sconto Minorenne";
+    }
+    else if (personAge == "range2") {
+      var price = whole.toFixed(2);
+      var offer = "Prezzo intero";
+    }
+    else if (personAge == "range3") {
+      var price = 0.6 * whole;
+      var price = price.toFixed(2);
+      var offer = "Sconto Over 65";
+    }
+    document.getElementById("outputOffer").innerHTML = offer;
+    document.getElementById("outputPrice").innerHTML = price + " €";
+
+    var carriage = Math.floor(Math.random() * 10) + 1;
+    document.getElementById("outputCarriage").innerHTML = carriage;
+
+    var cp = Math.floor(Math.random() * 10000) + 90000;
+    document.getElementById("outputCP").innerHTML = cp;
   }
-  else if (outputAge == "range2") {
-    var offer = whole.toFixed(2);
-    document.getElementById("outputOffer").innerHTML = "Prezzo intero";
-  }
-  else if (outputAge == "range3") {
-    var offer = 0.6 * whole;
-    var offer = offer.toFixed(2);
-    document.getElementById("outputOffer").innerHTML = "Sconto Over 65";
-  }
-  document.getElementById("outputPrice").innerHTML = offer + " €";
-
-  document.getElementById("outputCarriage").innerHTML = Math.floor(Math.random() * 10) + 1;
-
-  document.getElementById("outputCP").innerHTML = Math.floor(Math.random() * 10000) + 90000;
 }
 );
 
 element2.addEventListener('click',
 function() {
-  inputName.value = "";
+  document.getElementById("inputName").value = "";
+  document.getElementById("inputKm").value = "";
+  document.getElementById("inputAge").value = "";
 
-  inputKm.value = "";
-
-  inputAge.value = "";
+  document.getElementById("outputName").innerHTML = "";
+  document.getElementById("outputOffer").innerHTML = "";
+  document.getElementById("outputPrice").innerHTML = "";
+  document.getElementById("outputCarriage").innerHTML = "";
+  document.getElementById("outputCP").innerHTML = "";
 }
 );
