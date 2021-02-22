@@ -1,7 +1,11 @@
-var element = document.getElementById("go");
+var element1 = document.getElementById("go");
+var element2 = document.getElementById("no");
+document.getElementById("ticket-container").style.display = "none";
 
-element.addEventListener('click',
+element1.addEventListener('click',
 function() {
+  document.getElementById("ticket-container").style.display = "flex";
+
   var outputName = document.getElementById("inputName").value;
   document.getElementById("outputName").innerHTML = outputName;
 
@@ -28,5 +32,11 @@ function() {
   document.getElementById("outputCarriage").innerHTML = Math.floor(Math.random() * 10) + 1;
 
   document.getElementById("outputCP").innerHTML = Math.floor(Math.random() * 10000) + 90000;
+}
+);
+
+element2.addEventListener('click',
+function() {
+  document.getElementById("ticket-container").style.display = "none";
 }
 );
