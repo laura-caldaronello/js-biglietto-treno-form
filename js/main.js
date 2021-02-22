@@ -37,6 +37,10 @@ function() {
 
 element2.addEventListener('click',
 function() {
-  document.getElementById("ticket-container").style.display = "none";
+  inputName.value = "";
+
+  inputKm.value = "";
+
+  inputAge.value = "";
 }
 );
