@@ -1,0 +1,75 @@
+/* classi preliminari */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.ms-container {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(185,20,80);
+}
+
+.ms-wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* /classi preliminari */
+
+/* classi generiche */
+
+.ms-uppercase {
+  text-transform: uppercase;
+}
+
+.ms-text-center {
+  text-align: center;
+}
+
+.ms-color-white {
+  color: white;
+}
+
+.ms-white-box {
+  background-color: white;
+  padding: 15px;
+}
+
+.ms-button {
+  margin: auto 10px;
+}
+
+/* /classi generiche */
+
+/* classi specifiche */
+
+.ms-wrapper > h2 {
+  padding: 15px;
+}
+
+#input-container {
+  display: flex;
+  justify-content: space-around;
+}
+#buttons-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+#ticket-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+#ticket-container > * {
+  padding: 15px;
+}
+#ticket-container > *:first-child {
+  background-color: grey;
+}
+
+/* /classi specifiche */
