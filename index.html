@@ -15,22 +15,22 @@
       <div class="ms-white-box">
         <div id="input-container">
           <div class="input-element">
-            <label for="inputNameLastName">
+            <label for="inputName">
               <h4 class="ms-text-center">Nome Cognome</h4>
             </label>
-            <input type="text" name="inputNameLastName">
+            <input type="text" name="inputName" id="inputName">
           </div>
           <div class="input-element">
-            <label for="km">
+            <label for="inputKm">
               <h4 class="ms-text-center">Km da percorrere</h4>
             </label>
-            <input type="number" min="10" max="1000" name="km">
+            <input type="number" min="10" max="1000" name="inputKm" id="inputKm">
           </div>
           <div class="input-element">
-            <label for="age">
+            <label for="inputAge">
               <h4 class="ms-text-center">Fascia d'età</h4>
             </label>
-            <select name="age">
+            <select name="inputAge" id="inputAge">
               <option value="range1">
                 < 18
               </option>
@@ -44,8 +44,8 @@
           </div>
         </div>
         <div id="buttons-container">
-          <button class="ms-button">genera</button>
-          <button class="ms-button">annulla</button>
+          <button class="ms-button" id="go">genera</button>
+          <button class="ms-button" id="no">annulla</button>
         </div>
       </div>
       <h2 class="ms-uppercase ms-text-center ms-color-white">il tuo biglietto</h2>
@@ -54,23 +54,23 @@
         <div id="ticket-container">
           <div>
             <h3>nome passeggero</h3>
-            <h3 id="outputNameLastName"></h3>
+            <h3 id="outputName"></h3>
           </div>
           <div>
             <h4>offerta</h4>
-            <h4></h4>
+            <h4 id="outputOffer"></h4>
           </div>
           <div>
             <h4>carrozza</h4>
-            <h4></h4>
+            <h4 id="outputCarriage"></h4>
           </div>
           <div>
             <h4>codice cp</h4>
-            <h4></h4>
+            <h4 id="outputCP"></h4>
           </div>
           <div>
             <h4>costo biglietto</h4>
-            <h4></h4>
+            <h4 id="outputPrice"></h4>
           </div>
         </div>
       </div>
